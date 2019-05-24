@@ -1,0 +1,13 @@
+.container {
+    margin: 0 auto;
+}
+
+.canvas-wrapper {
+    width: 100%;
+    overflow: hidden;
+    height: 99vh;
+}
+
+canvas {
+    max-height: 100vh;
+}

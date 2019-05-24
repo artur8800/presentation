@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<!--
+  This is a simple example / template impress.js slide show. The goal is to be
+  easier to read for a first timer than the official and very feature rich
+  demo by bartaz (http://bartaz.github.io/impress.js/). It's also a very
+  traditional presentation that looks like slides (square screens with bullet
+  points...), again to make a first timer feel more at home. From this simple
+  presentation you can then go on to more powerful impress.js presentations!
+  
+  This example is hopefully helpful for people that want to create both
+  simple and (eventually) awesome presentations in impress.js and comfortable
+  doing that directly in HTML.
+  
+  By: @henrikingo (Still based on the HTML from bartaz' demo.)  
+    
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A Study in 3D Rotations| by Henrik Ingo @henrikingo</title>
+    <meta name="description" content="Explore impress.js in 3D" />
+    <meta name="author" content="Henrik Ingo" />
+    <link href="css/3D-rotations.css" rel="stylesheet" />
+  </head>
+
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js,
+        so you are presented with a simplified version of this presentation.
+      </p>
+      <p>
+        For the best experience please use the latest <b>Chrome</b>,
+        <b>Safari</b> or <b>Firefox</b> browser.
+      </p>
+    </div>
+    <div class="render">
+      <div class="container">
+        <div id="js-canvas-wrapper" class="canvas-wrapper"></div>
+      </div>
+    </div>
+    <div id="impress" data-transition-duration="2000">
+      <div
+        id="step-1"
+        class="step"
+        data-x="0"
+        data-y="0"
+        data-z="0"
+        data-goto-prev="step-8"
+      >
+        <h1>THE AWAKING</h1>
+        <h2 style="text-transform: uppercase;">Пробуждение</h2>
+      </div>
+
+      <div
+        id="step-2"
+        class="step"
+        data-x="420"
+        data-y="-70"
+        data-z="-250"
+        data-rotate-z="45"
+        data-rotate-y="-45"
+        data-rotate-order="zyx"
+      >
+        <p>
+          ШАМАНСКИЙ ОПЫТ - ЭТО ВИЗУАЛЬНОЕ И ЗВУКОВОЕ ПУТЕШЕСТВИЕ ПОД
+          РУКОВОДСТВОМ ШАМАНА ОМАРА (БИОГРАФИЯ НИЖЕ). ИСПОЛЬЗУЯ ГОДЫ В ДЖУНГЛЯХ
+          И ЦЕЛУЮ ЖИЗНЬ МИСТИКИ, ШАМАН ОМАР СОЧЕТАЕТ В СЕБЕ ДРЕВНИЕ ШАМАНСКИЕ
+          ТЕХНОЛОГИИ, ТАКИЕ КАК ФЛЕЙТЫ, БАРАБАНЫ И ИКАРОСЫ, МАНТРЫ И Т. Д., С
+          ПОТРЯСАЮЩИМИ ВИЗУАЛЬНЫМИ ОБРАЗАМИ 4K, ЧТОБЫ ПРИНЯТЬ ГОСТЕЙ В
+          ДЕЙСТВИТЕЛЬНО МОЩНОЕ И ВДОХНОВЛЯЮЩЕЕ ПУТЕШЕСТВИЕ ... ВНУТРЬ СЕБЯ.
+        </p>
+      </div>
+
+      <div
+        id="step-3"
+        class="step"
+        data-x="700"
+        data-y="350"
+        data-z="-350"
+        data-rotate-z="90"
+        data-rotate-y="-90"
+        data-rotate-order="zyx"
+      >
+        <p>
+          Это
+          <a href="https://www.youtube.com/watch?v=vjkdzce3T3c&t=5s"> видео</a>
+          было снято в Остине, Техас, март 2018 года. «Пробуждение: шаманский
+          опыт в 4k» - Шаман Омар
+        </p>
+        <img src="shaman.jpg" />
+      </div>
+
+      <div
+        id="step-4"
+        class="step"
+        data-x="422"
+        data-y="780"
+        data-z="-250"
+        data-rotate-z="135"
+        data-rotate-y="-135"
+        data-rotate-order="zyx"
+      >
+        <h2>Шаман Омар</h2>
+        <h3>Биография</h3>
+        <p>
+          Шаман Омар - Мистик, Шаман, Аяуаскеро, Учитель и Активист. Он
+          обеспечивает четкий мост между древней шаманской мудростью наших
+          предков с пониманием «современного» дня. Шаман Омар провел около 10
+          000 духовных искателей через шаманские церемонии по всему миру. Широко
+          рассматривающийся, как один из самых талантливых шаманских флейтистов
+          в мире,
+        </p>
+      </div>
+
+      <div
+        id="step-5"
+        class="step"
+        data-x="0"
+        data-y="702"
+        data-z="0"
+        data-rotate-z="180"
+        data-rotate-y="-180"
+        data-rotate-order="zyx"
+      >
+        <p>
+          Омар руководил одними из самых больших массовых медитаций в Майами с
+          помощью своей удивительной и всепроникающней музыки. Недавно он
+          выпустил свой альбом для медитации на шаманской флейте «Пробуждение:
+          шаманское путешествие», который теперь доступен в iTunes.
+        </p>
+      </div>
+
+      <div
+        id="step-6"
+        class="step"
+        data-x="379"
+        data-y="780"
+        data-z="270"
+        data-rotate-z="135"
+        data-rotate-y="-225"
+        data-rotate-order="zyx"
+      >
+        <p>
+          Известный как «Городской шаман», или «Неошаман», он еженедельно
+          проводит свои мастер-классы в ведущих центрах и студиях событий в
+          Нью-Йорке, Лос-Анджелесе, Майами и по всей Америке. В дополнение к
+          ведущим семинарам по шаманскому дыханию и медитации он также выступает
+          на различные темы перед корпорациями, организациями и на частных
+          мероприятиях. Он также является директором выступающих в Универсальном
+          Теогностическом обществе, международном некоммерческом гражданском
+          обществе, посвященном шаманской мистике.
+        </p>
+      </div>
+
+      <div
+        id="step-7"
+        class="step"
+        data-x="700"
+        data-y="350"
+        data-z="350"
+        data-rotate-z="90"
+        data-rotate-y="-270"
+        data-rotate-order="zyx"
+      >
+        <p>
+          <a href="https://youtu.be/X9fp_QFAilA"
+            >Массовая Медитация | День Земли 2017 | Майами</a
+          >
+        </br>
+          Другие кадры из серии «Пробуждение»: «Дух воды» (Третий Глаз)
+          <a href="https://youtu.be/LYbdbW9BoSQ">Дух воды</a>
+        </p>
+      </div>
+
+      <div
+        id="step-8"
+        class="step"
+        data-x="379"
+        data-y="-70"
+        data-z="270"
+        data-rotate-z="45"
+        data-rotate-y="-315"
+        data-rotate-order="zyx"
+        data-goto-next="step-1"
+      >
+        <p>Slide eight</p>
+      </div>
+    </div>
+
+    <div id="impress-toolbar"></div>
+    <div id="impress-help"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.2/pixi.min.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+    <style>
+      p {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+    </style>
+  </body>
+</html>
