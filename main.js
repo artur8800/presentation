@@ -196,17 +196,17 @@ var initCanvasSlideshow = new CanvasSlideshow({
   dispatchPointerOver: true // restarts pointerover event after click
 });
 
-anime({
-  targets: svgPath,
-  strokeDashoffset: [anime.setDashoffset, 0],
-  fill: [anime.fill, "000"],
-  loop: true,
-  easing: "cubicBezier( 1, .05, .1, .3)",
-  duration: 20000
+// anime({
+//   targets: svgPath,
+//   strokeDashoffset: [anime.setDashoffset, 0],
+//   fill: [anime.fill, "000"],
+//   loop: true,
+//   easing: "cubicBezier( 1, .05, .1, .3)",
+//   duration: 20000
 
-  //   direction: 'alternate',
-  //   delay: function (el, i) { return i * 100 }
-});
+//   //   direction: 'alternate',
+//   //   delay: function (el, i) { return i * 100 }
+// });
 
 // function stopFunc() {
 //   console.log(anime.remove());
@@ -221,7 +221,7 @@ let promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     // переведёт промис в состояние fulfilled с результатом "result"
     resolve("result");
-  }, 15000);
+  }, 1000);
 });
 
 // promise.then навешивает обработчики на успешный результат или ошибку
@@ -239,10 +239,10 @@ promise.then(
     promise.then(
       result => {
         // первая функция-обработчик - запустится при вызове resolve
-        anime.remove(svgPath);
+        // anime.remove(svgPath);
 
         console.log("removed");
-        el.parentNode.removeChild(el);
+        // el.parentNode.removeChild(el);
         impress().init();
       },
 
