@@ -172,16 +172,11 @@
       that.loadPixiSprites(options.pixiSprites);
     };
 
-    /// ---------------------------
-    //  START
-    /// ---------------------------
-    // setTimeout(() => {
-    //   this.init();
-    // }, 5000);
     this.init();
   };
 })();
 
+const svgPath = document.querySelectorAll(".path");
 var spriteImagesSrc = [];
 spriteImagesSrc.push("jungle.jpg");
 
@@ -200,3 +195,65 @@ var initCanvasSlideshow = new CanvasSlideshow({
   displaceAutoFit: true,
   dispatchPointerOver: true // restarts pointerover event after click
 });
+
+anime({
+  targets: svgPath,
+  strokeDashoffset: [anime.setDashoffset, 0],
+  fill: [anime.fill, "000"],
+  loop: true,
+  easing: "cubicBezier( 1, .05, .1, .3)",
+  duration: 20000
+
+  //   direction: 'alternate',
+  //   delay: function (el, i) { return i * 100 }
+});
+
+// function stopFunc() {
+//   console.log(anime.remove());
+//   anime.remove(svgPath);
+// }
+
+// setTimeout(stopFunc, 15000);
+
+var el = document.getElementById("rendAnim");
+
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // переведёт промис в состояние fulfilled с результатом "result"
+    resolve("result");
+  }, 15000);
+});
+
+// promise.then навешивает обработчики на успешный результат или ошибку
+promise.then(
+  result => {
+    // первая функция-обработчик - запустится при вызове resolve
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // переведёт промис в состояние fulfilled с результатом "result"
+        resolve("result");
+      }, 1000);
+    });
+
+    // promise.then навешивает обработчики на успешный результат или ошибку
+    promise.then(
+      result => {
+        // первая функция-обработчик - запустится при вызове resolve
+        anime.remove(svgPath);
+
+        console.log("removed");
+        el.parentNode.removeChild(el);
+        impress().init();
+      },
+
+      error => {
+        // вторая функция - запустится при вызове reject
+        alert("Rejected: " + error); // error - аргумент reject
+      }
+    );
+  },
+  error => {
+    // вторая функция - запустится при вызове reject
+    alert("Rejected: " + error); // error - аргумент reject
+  }
+);
