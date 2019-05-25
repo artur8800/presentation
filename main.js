@@ -4,15 +4,16 @@
     /// ---------------------------
     var that = this;
 
+    console.log(that);
     //  OPTIONS
     /// ---------------------------
     options = options || {};
     options.stageWidth = options.hasOwnProperty("stageWidth")
       ? options.stageWidth
-      : 1920;
+      : document.documentElement.clientWidth;
     options.stageHeight = options.hasOwnProperty("stageHeight")
       ? options.stageHeight
-      : 1080;
+      : document.documentElement.clientHeight;
     options.pixiSprites = options.hasOwnProperty("sprites")
       ? options.sprites
       : [];
@@ -83,12 +84,13 @@
         renderer.view.style.objectFit = "cover";
         renderer.view.style.width = "100%";
         renderer.view.style.height = "100%";
-        // renderer.view.style.top = "50%";
+        // renderer.view.style.backgroundColor = "red";
         // renderer.view.style.left = "50%";
         renderer.view.style.webkitTransform = "scale(1)";
         renderer.view.style.transform = "scale(1)";
       } else {
         renderer.view.style.maxWidth = "100%";
+
         // renderer.view.style.top = "50%";
         // renderer.view.style.left = "50%";
         renderer.view.style.webkitTransform = "translate( -50%, -50% )";
@@ -110,6 +112,7 @@
         displacementSprite.x = renderer.width / 2;
         displacementSprite.y = renderer.height / 2;
       }
+      // displacementFilter.style.backgroundColor = "rgba(0,0,0,1)";
 
       displacementSprite.scale.x = 2;
       displacementSprite.scale.y = 2;
@@ -186,6 +189,7 @@ var initCanvasSlideshow = new CanvasSlideshow({
     "https://raw.githubusercontent.com/Pierrinho/elephant/master/pattern-clouds.jpg",
   autoPlay: true,
   centerSprites: true,
+
   stageWidth: "",
   stageHeight: "",
   fullScreen: true,
@@ -195,65 +199,3 @@ var initCanvasSlideshow = new CanvasSlideshow({
   displaceAutoFit: true,
   dispatchPointerOver: true // restarts pointerover event after click
 });
-
-// anime({
-//   targets: svgPath,
-//   strokeDashoffset: [anime.setDashoffset, 0],
-//   fill: [anime.fill, "000"],
-//   loop: true,
-//   easing: "cubicBezier( 1, .05, .1, .3)",
-//   duration: 20000
-
-//   //   direction: 'alternate',
-//   //   delay: function (el, i) { return i * 100 }
-// });
-
-// function stopFunc() {
-//   console.log(anime.remove());
-//   anime.remove(svgPath);
-// }
-
-// setTimeout(stopFunc, 15000);
-
-var el = document.getElementById("rendAnim");
-
-let promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // переведёт промис в состояние fulfilled с результатом "result"
-    resolve("result");
-  }, 1000);
-});
-
-// promise.then навешивает обработчики на успешный результат или ошибку
-promise.then(
-  result => {
-    // первая функция-обработчик - запустится при вызове resolve
-    let promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // переведёт промис в состояние fulfilled с результатом "result"
-        resolve("result");
-      }, 1000);
-    });
-
-    // promise.then навешивает обработчики на успешный результат или ошибку
-    promise.then(
-      result => {
-        // первая функция-обработчик - запустится при вызове resolve
-        // anime.remove(svgPath);
-
-        console.log("removed");
-        // el.parentNode.removeChild(el);
-        impress().init();
-      },
-
-      error => {
-        // вторая функция - запустится при вызове reject
-        alert("Rejected: " + error); // error - аргумент reject
-      }
-    );
-  },
-  error => {
-    // вторая функция - запустится при вызове reject
-    alert("Rejected: " + error); // error - аргумент reject
-  }
-);
