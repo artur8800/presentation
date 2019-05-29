@@ -213,7 +213,7 @@ body {
 
 canvas {
     display: block;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     z-index: -22;
     left: 0;
