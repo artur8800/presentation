@@ -167,10 +167,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-canvas {
-  /* Disables pull-to-refresh but allows overscroll glow effects. */
-  overscroll-behavior-y: contain;
-}
 
 html,
 body {
