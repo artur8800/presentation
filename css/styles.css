@@ -108,12 +108,14 @@ section {
     display: block;
 }
 
+
 body {
     line-height: 1.5;
     position: relative;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     width: 100%;
+    height: auto;
     margin: 0 auto;
     font-size: 24px;
     font-weight: bold;
@@ -124,7 +126,7 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
     color: #c3e8ecc7;
     text-shadow: 3px 3px 1px #010800, 0 0 1em #41de63;
 }
@@ -173,8 +175,10 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-  
-     
+
+    /* scroll-behavior: auto;
+    overscroll-behavior: auto contain; */
+
 }
 
 .aos-item {
@@ -183,8 +187,9 @@ body {
     max-width: 70%;
     height: auto;
     padding: 20px;
-   overflow: hidden;
+    overflow: hidden;
     margin: 20vh auto 50vh auto;
+
 }
 
 .aos-item::before {
@@ -198,45 +203,60 @@ body {
 }
 
 .canvas-wrapper {
+
     position: fixed;
+    /* pointer-events: none; */
     overflow: hidden;
+    /* scroll-behavior: auto; */
+    overscroll-behavior: none;
+    touch-action: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100%;
     z-index: -11;
-   
-   
-   
+
+
+
 }
 
 canvas {
     display: block;
-    position: fixed;
+    overscroll-behavior: none;
+    /* scroll-behavior: auto; */
+
+    box-sizing: content-box;
+
+    position: absolute;
+    touch-action: none;
     overflow: hidden;
-    z-index: -22;
+    z-index: -99922;
     left: 0;
     bottom: 0;
     right: 0;
+    max-width: 100%;
+    min-height: 100%;
     top: 0;
 }
+
 .aos-all {
-          overflow: hidden;
-    scroll-behavior: auto;
+    overflow: hidden;
+    overscroll-behavior: none;
+    /* scroll-behavior: auto; */
 }
 
 .container {
     min-width: 320px;
     max-width: 1170px;
     margin: 0 auto;
-    
+
     position: relative;
-    scroll-behavior: auto;
+    overscroll-behavior: none;
     overflow: hidden;
 
-  
+
 }
 
 @media (max-width: 650px) {
@@ -245,12 +265,16 @@ canvas {
         max-height: 100%;
         overflow: hidden;
         cursor: none;
-     
+
+    }
+
+    .canvas-wrapper {
+        min-height: 110vh;
     }
 
     body {
         font-size: 15px;
-     
+
     }
 
     body,
@@ -262,6 +286,11 @@ canvas {
     }
 
     .container {
-        background-color:rgba(179, 232, 191, 0.25);
+        background-color: rgba(179, 232, 191, 0.25);
+    }
+
+    .aos-item {
+        max-width: 100%;
+        padding: 0 5px;
     }
 }
