@@ -232,7 +232,7 @@ canvas {
     max-width: 1170px;
     margin: 0 auto;
     
-    position: absolute;
+    position: relative;
     scroll-behavior: auto;
     overflow: hidden;
 
