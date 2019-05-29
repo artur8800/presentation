@@ -211,7 +211,7 @@ body {
 
 canvas {
     display: block;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     z-index: -22;
     left: 0;
