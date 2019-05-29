@@ -225,7 +225,7 @@ canvas {
     max-width: 1170px;
     margin: 0 auto;
     overflow: hidden;
-   overscroll-behavior: contain;
+  
 }
 
 @media (max-width: 650px) {
