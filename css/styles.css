@@ -234,7 +234,7 @@ canvas {
         max-height: 100%;
         overflow: hidden;
         cursor: none;
-       overscroll-behavior: none;
+     
     }
 
     body {
