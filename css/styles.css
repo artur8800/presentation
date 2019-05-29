@@ -183,7 +183,7 @@ body {
     max-width: 70%;
     height: auto;
     padding: 20px;
-
+   overflow: hidden;
     margin: 20vh auto 50vh auto;
 }
 
