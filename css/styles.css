@@ -234,12 +234,12 @@ canvas {
         max-height: 100%;
         overflow: hidden;
         cursor: none;
-       overscroll-behavior: contain;
+       overscroll-behavior: none;
     }
 
     body {
         font-size: 15px;
-      overscroll-behavior: contain;
+      overscroll-behavior: none;
     }
 
     body,
