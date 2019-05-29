@@ -52,7 +52,7 @@ setTimeout(function() {
         : false;
       options.interactionEvent = options.hasOwnProperty("interactionEvent")
         ? options.interactionEvent
-        : "";
+        : false;
       options.displacementCenter = options.hasOwnProperty("displacementCenter")
         ? options.displacementCenter
         : false;
@@ -90,7 +90,7 @@ setTimeout(function() {
         stage.addChild(slidesContainer);
 
         // Enable Interactions
-        stage.interactive = true;
+        stage.interactive = false;
 
         // Fit renderer to the screen
         if (options.fullScreen === true) {
@@ -100,8 +100,8 @@ setTimeout(function() {
           renderer.view.style.height = "100%";
           // renderer.view.style.backgroundColor = "red";
           // renderer.view.style.left = "50%";
-          // renderer.view.style.webkitTransform = "scale(1)";
-          // renderer.view.style.transform = "scale(1)";
+          renderer.view.style.webkitTransform = "scale(1)";
+          renderer.view.style.transform = "scale(1)";
         } else {
           renderer.view.style.maxWidth = "100%";
 
@@ -196,7 +196,9 @@ setTimeout(function() {
 
   const svgPath = document.querySelectorAll(".path");
   var spriteImagesSrc = [];
-  spriteImagesSrc.push("jungle.jpg");
+  spriteImagesSrc.push(
+    "https://raw.githubusercontent.com/artur8800/presentation/master/jungle.jpg"
+  );
 
   var initCanvasSlideshow = new CanvasSlideshow({
     sprites: spriteImagesSrc,
@@ -206,7 +208,7 @@ setTimeout(function() {
     centerSprites: true,
     fullScreen: true,
     autoPlaySpeed: [1, 0],
-    interactive: true,
+
     interactionEvent: "click", // 'click', 'hover', 'both'
     displaceAutoFit: true,
     displacementCenter: true,

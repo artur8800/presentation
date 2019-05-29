@@ -12,6 +12,7 @@
     <![endif]-->
   </head>
   <body class="shown">
+    <div id="js-canvas-wrapper" class="canvas-wrapper"></div>
     <div class="container">
           <div class="aos-all">
             <div data-id="1" class="aos-item aos-init" data-aos="fade-right" data-aos-offset="123" data-aos-easing="ease-in-sine"
@@ -39,7 +40,7 @@
                   года.</br>
                   «Пробуждение: шаманскиq опыт в 4k» - Шаман Омар
                 </p>
-                <img src="shaman.jpg" />
+                <img src="img/shaman.jpg" />
               </div>
             </div>
             <div data-id="4" class="aos-item aos-init" data-aos-offset="12" data-aos-easing="ease-in-sine"
@@ -100,14 +101,17 @@
     </div>
   
 
-    <div id="js-canvas-wrapper" class="canvas-wrapper"></div>
+    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.2/pixi.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
  
     <script src="main.js"></script>
     <script>
       document.querySelector("html").classList.remove("no-js");
-        
+        window.scrollBy(0, 1);
+        document.ontouchmove = function (event) {
+            event.preventDefault();
+          }
     </script>
   </body>
 </html>
