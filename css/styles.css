@@ -237,7 +237,9 @@ canvas {
 
     body {
         font-size: 15px;
-       margin-bootom: calc(100vh - 100%);
+       height: calc(100vh - 100px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
     }
 
     body,
