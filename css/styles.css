@@ -222,13 +222,20 @@ canvas {
     right: 0;
     top: 0;
 }
-
+.aos-all {
+          overflow: hidden;
+    scroll-behavior: auto;
+}
 
 .container {
     min-width: 320px;
     max-width: 1170px;
     margin: 0 auto;
     
+    position: absolute;
+    scroll-behavior: auto;
+    overflow: hidden;
+
   
 }
 
